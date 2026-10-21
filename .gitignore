@@ -1,0 +1,21 @@
+# Ignore the contents of the data directory
+/data/
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*~
+*.swp
+*.swo
+
+# R session and RStudio files
+.RData
+.RDataTmp
+.Rhistory
+.Ruserdata
+.Rproj.user/
+
+# Operating-system files
+.DS_Store
+Thumbs.db

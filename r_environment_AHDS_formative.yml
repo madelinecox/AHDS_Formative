@@ -1,0 +1,8 @@
+name: r_AHDS_form
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base=4.5.2
+  - r-tidyverse=2.0.0
+prefix: /home/madeline/miniconda3/envs/r_AHDS_form
