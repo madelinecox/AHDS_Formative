@@ -1,0 +1,8 @@
+Instructions on how to create and active the Conda environment
+
+- Open up a terminal (if a windows user, ensure you are in WSL)
+- Activate conda with "conda activate"
+- Create a new conda environment with "conda create -n <environment_name>"
+- You can check you have created it with "conda env list"
+- Activate the conda environemnt with "conda activate <environment_name>"
+
