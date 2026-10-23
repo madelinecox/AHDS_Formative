@@ -2,7 +2,7 @@
 
 #code to process the files for the formative
 
-DATADIR='../../data/'
+DATADIR='../../Data/'
 
 cd ${DATADIR}/original
 

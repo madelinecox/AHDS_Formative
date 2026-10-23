@@ -1,10 +1,12 @@
 #!/usr/bin/env Rscript
 
-datadir='../../Data'
+library(this.path)
+
+datadir=paste0(this.dir(), "/../../Data/")
 
 # read in the acceleromter ids and survey data
-accel_IDs <- read.table(paste0(datadir, '/derived/accel/accel_IDs.txt'), header=FALSE, col.names='PID')
-survey_data <- read.table(paste0(datadir, '/derived/BMX_D.tsv'), header=TRUE, sep="\t")
+accel_IDs <- read.table(paste0(datadir, 'derived/accel/accel_IDs.txt'), header=FALSE, col.names='PID')
+survey_data <- read.table(paste0(datadir, 'derived/BMX_D.tsv'), header=TRUE, sep="\t")
 
 #-------- 2 ways to do this going forward, 1 = solutions, 2 = my way -----------
 #1. 
@@ -44,5 +46,5 @@ length(which(!is.na(data_combined$BMXBMI)))
 length(which(!is.na(data_combined$BMXBMI) & is.na(data_combined$has_accel)))
 
 # save a sample data file
-write.csv(x = data_combined[,c('SEQN', 'insample')], file=paste0(datadir, '/derived/sample.csv'))
+write.csv(data_combined[,c('SEQN', 'in_sample')], file = paste0(datadir, "derived/sample.csv"), row.names = FALSE)
 

@@ -80,13 +80,12 @@ wc -l accel/accel-41474.txt #10082
 #this then totals 10080 inputs for each participant 
 #Note that PAXN is the number of the input, so it goes from 1-10080 for each participant
 
-#checking that all files in accel contain 10082 rows
-
 #checking that all files in accel contain 8 columns (in the header row) and 10082 rows
-cols_and_rows=$(for file in accel/*.txt
+for file in accel/*.txt
 do
     awk 'NR == 2 {columns = NF} END {print columns, NR}' "$file"
-done | sort | uniq -c)
+done | sort | uniq -c
+
 #7324 files have 10082 rows and 8 columns
 #the remaining files have a variable number between 2253 and 10097
 
